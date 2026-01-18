@@ -6,3 +6,4 @@ qr-code.png
 dist/
 build/
 subscribers.json
+.vercel
