@@ -8,6 +8,21 @@
   ],
   "routes": [
     {
+      "src": "/api/subscribe",
+      "dest": "/api/server.js",
+      "methods": ["POST"]
+    },
+    {
+      "src": "/api/subscribers",
+      "dest": "/api/server.js",
+      "methods": ["GET"]
+    },
+    {
+      "src": "/health",
+      "dest": "/api/server.js",
+      "methods": ["GET"]
+    },
+    {
       "src": "/(.*)",
       "dest": "/api/server.js"
     }

@@ -156,9 +156,6 @@ async function writeSubscribers(subscribers) {
     }
 }
 
-// Serve static files
-app.use(express.static(path.join(__dirname, '..')));
-
 // API endpoint to handle subscriptions
 app.post('/api/subscribe', async (req, res) => {
     const { email } = req.body;
@@ -220,9 +217,24 @@ app.get('/api/subscribers', async (req, res) => {
     }
 });
 
-// Serve the landing page
+// Serve static files explicitly with correct Content-Type headers
+app.get('/styles.css', (req, res) => {
+    const cssPath = path.join(__dirname, '..', 'styles.css');
+    res.setHeader('Content-Type', 'text/css; charset=utf-8');
+    res.sendFile(cssPath);
+});
+
+app.get('/script.js', (req, res) => {
+    const jsPath = path.join(__dirname, '..', 'script.js');
+    res.setHeader('Content-Type', 'application/javascript; charset=utf-8');
+    res.sendFile(jsPath);
+});
+
+// Serve the landing page (must be last to catch all other routes)
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'index.html'));
+    const htmlPath = path.join(__dirname, '..', 'index.html');
+    res.setHeader('Content-Type', 'text/html; charset=utf-8');
+    res.sendFile(htmlPath);
 });
 
 // Health check endpoint
