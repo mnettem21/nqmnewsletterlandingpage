@@ -1,4 +1,4 @@
-# Non-QM Daily News - Newsletter Landing Page
+# Non-QM News - Newsletter Landing Page
 
 A beautiful landing page for email newsletter subscriptions with file-based storage and optional email confirmations.
 
@@ -48,7 +48,7 @@ SMTP_PASS=your-app-password
 
 # Email sender details
 FROM_EMAIL=your-email@gmail.com
-FROM_NAME=Non-QM Daily News
+FROM_NAME=Non-QM News
 ```
 
 #### Setting Up Email (Optional)

@@ -28,7 +28,7 @@ function initEmail() {
     const smtpUser = process.env.SMTP_USER;
     const smtpPass = process.env.SMTP_PASS;
     const fromEmail = process.env.FROM_EMAIL || smtpUser;
-    const fromName = process.env.FROM_NAME || 'Non-QM Daily News';
+    const fromName = process.env.FROM_NAME || 'Non-QM News';
 
     if (emailEnabled && smtpHost && smtpPort && smtpUser && smtpPass) {
         emailTransporter = nodemailer.createTransport({
@@ -59,7 +59,7 @@ async function sendConfirmationEmail(toEmail, emailConfig) {
         const mailOptions = {
             from: `"${emailConfig.fromName}" <${emailConfig.fromEmail}>`,
             to: toEmail,
-            subject: 'Welcome to Non-QM Daily News!',
+            subject: 'Welcome to Non-QM News!',
             html: `
                 <!DOCTYPE html>
                 <html>
@@ -75,10 +75,10 @@ async function sendConfirmationEmail(toEmail, emailConfig) {
                 <body>
                     <div class="container">
                         <div class="header">
-                            <h1>Welcome to Non-QM Daily News!</h1>
+                            <h1>Welcome to Non-QM News!</h1>
                         </div>
                         <div class="content">
-                            <p>Thank you for subscribing to <strong>Non-QM Daily News</strong>!</p>
+                            <p>Thank you for subscribing to <strong>Non-QM News</strong>!</p>
                             <p>You'll now receive daily updates with the latest Non-Qualified Mortgage news and insights delivered straight to your inbox.</p>
                             <p>We're excited to keep you informed about:</p>
                             <ul>
@@ -87,14 +87,14 @@ async function sendConfirmationEmail(toEmail, emailConfig) {
                                 <li>⚡ Quick, actionable insights</li>
                             </ul>
                             <p>Stay tuned for your first newsletter!</p>
-                            <p>Best regards,<br>The Non-QM Daily News Team</p>
+                            <p>Best regards,<br>The Non-QM News Team</p>
                         </div>
                     </div>
                 </body>
                 </html>
             `,
             text: `
-Welcome to Non-QM Daily News!
+Welcome to Non-QM News!
 
 Thank you for subscribing! You'll now receive daily updates with the latest Non-Qualified Mortgage news and insights.
 
@@ -106,7 +106,7 @@ We're excited to keep you informed about:
 Stay tuned for your first newsletter!
 
 Best regards,
-The Non-QM Daily News Team
+The Non-QM News Team
             `,
         };
 

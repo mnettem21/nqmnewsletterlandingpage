@@ -46,7 +46,7 @@
    # Enter: your-email@gmail.com
    
    vercel env add FROM_NAME
-   # Enter: Non-QM Daily News
+   # Enter: Non-QM News
    ```
 
 5. **Redeploy** (to apply environment variables):
@@ -89,7 +89,7 @@
      - `SMTP_USER` = your email
      - `SMTP_PASS` = your app password
      - `FROM_EMAIL` = your email
-     - `FROM_NAME` = `Non-QM Daily News`
+     - `FROM_NAME` = `Non-QM News`
 
 7. **Deploy!**
    - Click "Deploy"

@@ -1,7 +1,7 @@
 {
   "name": "non-qm-newsletter-landing",
   "version": "1.0.0",
-  "description": "Landing page for Non-QM Daily News newsletter subscription",
+  "description": "Landing page for Non-QM News newsletter subscription",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
