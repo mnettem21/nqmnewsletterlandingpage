@@ -1,0 +1,8 @@
+node_modules/
+.env
+qr-code.png
+*.log
+.DS_Store
+dist/
+build/
+subscribers.json
